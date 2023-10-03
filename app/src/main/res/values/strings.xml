@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Quillium</string>
     <string name="welcome">Welcome to Quillium</string>
-    <string name="about_app">Stay connected with your university community like never before. Join discussions, share updates, and connect with fellow students effortlessly. With features like messaging, personalized newsfeeds, and customizable settings, it\'s your gateway to a vibrant campus life.</string>
+    <string name="about_app">Join discussions, share updates, and connect with fellow students effortlessly. It\'s your gateway to a vibrant campus life.</string>
+    <string name="student_id_field">Student ID</string>
+    <string name="password_id_field">Password</string>
     <string name="login">LOGIN</string>
-    <string name="register">REGISTER</string>
+    <string name="register">Register Now</string>
+    <string name="prompt_reg">Don\'t have an account?</string>
 </resources>

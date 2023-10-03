@@ -19,7 +19,7 @@
             android:id="@+id/imageView_logo"
             android:layout_marginTop="30dp"
             app:srcCompat="@mipmap/app_logo"
-            android:maxWidth="180dp"
+            android:maxWidth="140dp"
             android:adjustViewBounds="true"
             android:layout_centerHorizontal="true"/>
 
@@ -32,7 +32,7 @@
             android:textAlignment="center"
             android:textColor="@color/primary"
             android:textSize="32sp"
-            android:paddingTop="32dp"
+            android:paddingTop="16dp"
             android:paddingBottom="4dp"
             android:layout_below="@id/imageView_logo"/>
 
@@ -49,13 +49,83 @@
             android:paddingBottom="32dp"
             android:layout_below="@id/textView_main_head"/>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/student_id_field"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:hint="@string/student_id_field"
+            android:textColorHint="@color/primary"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/primary"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/primary"
+            app:errorEnabled="false"
+            app:errorIconTint="@color/primary"
+            app:helperTextEnabled="false"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/primary"
+            android:layout_below="@id/textView_about_app">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/student_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_regular"
+                android:inputType="text"
+                tools:ignore="VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_id_field"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:hint="@string/password_id_field"
+            android:textColorHint="@color/primary"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/primary"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/primary"
+            app:errorEnabled="false"
+            app:errorIconTint="@color/primary"
+            app:helperTextEnabled="false"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/primary"
+            android:layout_below="@id/student_id_field">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_regular"
+                android:inputType="textPassword"
+                tools:ignore="VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_login"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
             android:height="60dp"
@@ -64,30 +134,50 @@
             android:textSize="18sp"
             android:textColor="@color/secondary"
             app:backgroundTint="@color/primary"
-            app:cornerRadius="50dp"
+            app:cornerRadius="15dp"
             app:rippleColor="@color/buttonRipple"
-            android:layout_below="@id/textView_about_app"
+            android:layout_below="@id/password_id_field"
             tools:ignore="VisualLintButtonSize" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_register"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="32dp"
-            android:height="60dp"
-            android:fontFamily="@font/sf_pro_bold"
-            android:text="@string/register"
-            android:textSize="18sp"
-            android:textColor="@color/secondary"
-            app:backgroundTint="@color/primary"
-            app:cornerRadius="50dp"
-            app:rippleColor="@color/buttonRipple"
-            android:layout_below="@id/button_login"
-            tools:ignore="VisualLintButtonSize" />
+            android:layout_below="@+id/button_login"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_register_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/sf_pro_regular"
+                android:paddingTop="4dp"
+                android:paddingBottom="0dp"
+                android:text="@string/prompt_reg"
+                android:textAlignment="center"
+                android:textColor="@color/ash"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_register_prompt"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/sf_pro_bold"
+                android:paddingTop="4dp"
+                android:paddingBottom="32dp"
+                android:text="@string/register"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
