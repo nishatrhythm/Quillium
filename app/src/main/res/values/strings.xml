@@ -7,4 +7,13 @@
     <string name="login">LOGIN</string>
     <string name="register">Register Now</string>
     <string name="prompt_reg">Don\'t have an account?</string>
+    <string name="reg_activity_title">Register on Quillium</string>
+    <string name="reg_button">REGISTER</string>
+    <string name="next_button">NEXT</string>
+    <string name="prompt_login">Already have an account?</string>
+    <string name="reg_activity_login">Login Now</string>
+    <string name="about_reg">Just a few steps away from joining the platform. Create your account now to unlock a world of possibilities!</string>
+    <string name="student_hsc_roll_field">HSC Roll</string>
+    <string name="student_ssc_roll_field">SSC Roll</string>
+    <string name="confirm_password_id_field">Confirm Password</string>
 </resources>
