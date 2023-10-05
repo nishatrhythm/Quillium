@@ -59,7 +59,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"
-            android:hint="@string/student_id_field"
+            android:hint="@string/student_email_field"
             android:textColorHint="@color/primary"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
@@ -78,11 +78,11 @@
             app:startIconDrawable="@drawable/round_person_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/student_id"
+                android:id="@+id/student_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_pro_regular"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:paddingStart="52dp"
                 android:paddingEnd="0dp"
                 tools:ignore="VisualLintTextFieldSize" />

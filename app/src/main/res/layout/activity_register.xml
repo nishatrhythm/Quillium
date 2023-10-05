@@ -128,51 +128,13 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/student_ssc_roll_field"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/student_hsc_roll_field"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="12dp"
-            android:hint="@string/student_ssc_roll_field"
-            android:textColorHint="@color/primary"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
-            app:boxStrokeColor="@color/primary"
-            app:endIconDrawable="@drawable/round_clear_24"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/primary"
-            app:errorEnabled="false"
-            app:errorIconTint="@color/primary"
-            app:helperTextEnabled="false"
-            app:hintAnimationEnabled="true"
-            app:hintEnabled="true"
-            app:hintTextColor="@color/primary"
-            app:startIconDrawable="@drawable/round_numbers_24">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/student_ssc_roll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_pro_regular"
-                android:inputType="number"
-                android:paddingStart="52dp"
-                android:paddingEnd="0dp"
-                tools:ignore="VisualLintTextFieldSize" />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/date_of_birth_field"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/student_ssc_roll_field"
+            android:layout_below="@id/student_hsc_roll_field"
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="12dp"
@@ -207,7 +169,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_register"
+            android:id="@+id/button_verify"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -229,7 +191,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_register"
+            android:layout_below="@+id/button_verify"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"

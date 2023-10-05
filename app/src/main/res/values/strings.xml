@@ -2,7 +2,7 @@
     <string name="app_name">Quillium</string>
     <string name="welcome">Welcome to Quillium</string>
     <string name="about_app">Join discussions, share updates, and connect with fellow students effortlessly. It\'s your gateway to a vibrant campus life.</string>
-    <string name="student_id_field">Student ID</string>
+    <string name="student_email_field">Email</string>
     <string name="password_id_field">Password</string>
     <string name="login">LOGIN</string>
     <string name="register">Register Now</string>
@@ -13,8 +13,13 @@
     <string name="prompt_login">Already have an account?</string>
     <string name="reg_activity_login">Login Now</string>
     <string name="about_reg">Just a few steps away from joining the platform. Create your account now to unlock a world of possibilities!</string>
+    <string name="student_id_field">Student ID</string>
     <string name="student_hsc_roll_field">HSC Roll</string>
-    <string name="student_ssc_roll_field">SSC Roll</string>
     <string name="date_of_birth_field">Date of Birth</string>
     <string name="confirm_password_id_field">Confirm Password</string>
+    <string name="welcome_student">Hi there!</string>
+    <string name="student_name">Nishat Mahmud</string>
+    <string name="student_id">B190305003</string>
+    <string name="department">Computer Science and Engineering</string>
+    <string name="session">2019 – 20</string>
 </resources>
