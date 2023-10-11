@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/app_bg"
     android:backgroundTintMode="src_over"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,9 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView_logo"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="12dp"
             app:srcCompat="@mipmap/app_logo"
-            android:maxWidth="140dp"
+            android:maxWidth="100dp"
             android:adjustViewBounds="true"
             android:layout_centerHorizontal="true"/>
 
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_bold"
-            android:text="@string/welcome"
+            android:text="@string/reg_activity_title"
             android:textAlignment="center"
             android:textColor="@color/primary"
             android:textSize="32sp"
@@ -38,28 +38,27 @@
             android:layout_below="@id/imageView_logo"/>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView_about_app"
+            android:id="@+id/textView_about_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_regular"
-            android:text="@string/about_app"
+            android:text="@string/about_reg"
             android:textAlignment="center"
             android:textColor="@color/ash"
             android:textSize="18sp"
             android:paddingTop="4dp"
-            android:paddingBottom="32dp"
+            android:paddingBottom="16dp"
             android:layout_below="@id/textView_main_head"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/student_id_field"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView_about_app"
+            android:layout_below="@id/textView_about_reg"
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"
-            android:hint="@string/student_email_field"
+            android:hint="@string/student_id_field"
             android:textColorHint="@color/primary"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
@@ -78,11 +77,11 @@
             app:startIconDrawable="@drawable/round_person_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/student_email"
+                android:id="@+id/student_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_pro_regular"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:paddingStart="52dp"
                 android:paddingEnd="0dp"
                 tools:ignore="VisualLintTextFieldSize" />
@@ -90,22 +89,22 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_id_field"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/student_hsc_roll_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/student_id_field"
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="12dp"
-            android:hint="@string/password_id_field"
+            android:hint="@string/student_hsc_roll_field"
             android:textColorHint="@color/primary"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
             app:boxStrokeColor="@color/primary"
-            app:endIconMode="password_toggle"
+            app:endIconDrawable="@drawable/round_clear_24"
+            app:endIconMode="clear_text"
             app:endIconTint="@color/primary"
             app:errorEnabled="false"
             app:errorIconTint="@color/primary"
@@ -113,16 +112,50 @@
             app:hintAnimationEnabled="true"
             app:hintEnabled="true"
             app:hintTextColor="@color/primary"
-            app:passwordToggleTint="@color/primary"
-            app:startIconDrawable="@drawable/round_lock_24">
+            app:startIconDrawable="@drawable/round_numbers_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_id"
+                android:id="@+id/student_hsc_roll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableTint="@color/primary"
                 android:fontFamily="@font/sf_pro_regular"
-                android:inputType="textPassword"
+                android:inputType="number"
+                android:paddingStart="52dp"
+                android:paddingEnd="0dp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_of_birth_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/student_hsc_roll_field"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:hint="@string/date_of_birth_field"
+            android:textColorHint="@color/primary"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/primary"
+            app:errorEnabled="false"
+            app:errorIconTint="@color/primary"
+            app:helperTextEnabled="false"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/primary"
+            app:startIconDrawable="@drawable/round_calendar_month_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:defaultFocusHighlightEnabled="false"
+                android:fontFamily="@font/sf_pro_regular"
+                android:inputType="date"
                 android:paddingStart="52dp"
                 android:paddingEnd="0dp"
                 tools:ignore="VisualLintTextFieldSize" />
@@ -130,29 +163,28 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_login"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/button_verify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
-            android:height="60dp"
+            android:height="55dp"
             android:fontFamily="@font/sf_pro_bold"
-            android:text="@string/login"
+            android:text="@string/verify_button"
             android:textSize="18sp"
             android:textColor="@color/secondary"
             app:backgroundTint="@color/primary"
             app:cornerRadius="15dp"
             app:rippleColor="@color/buttonRipple"
-            android:layout_below="@id/password_id_field"
+            android:layout_below="@id/date_of_birth_field"
             tools:ignore="VisualLintButtonSize" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button_login"
+            android:layout_below="@+id/button_verify"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
@@ -161,28 +193,28 @@
             android:padding="15dp">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView_register_prompt"
+                android:id="@+id/textView_login_prompt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:fontFamily="@font/sf_pro_regular"
                 android:paddingTop="4dp"
                 android:paddingBottom="0dp"
-                android:text="@string/prompt_reg"
+                android:text="@string/prompt_login"
                 android:textAlignment="center"
                 android:textColor="@color/ash"
                 android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView_register"
+                android:id="@+id/textView_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_register_prompt"
+                android:layout_below="@id/textView_login_prompt"
                 android:layout_marginStart="2dp"
                 android:fontFamily="@font/sf_pro_bold"
                 android:paddingTop="4dp"
                 android:paddingBottom="32dp"
-                android:text="@string/register"
+                android:text="@string/reg_activity_login"
                 android:textAlignment="center"
                 android:textColor="@color/primary"
                 android:textSize="18sp" />

@@ -13,11 +13,13 @@
         android:theme="@style/Theme.Quillium"
         tools:targetApi="31">
         <activity
-            android:name=".VerifyEmail"
-            android:exported="false" />
+            android:name=".VerifyEmailActivity"
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
