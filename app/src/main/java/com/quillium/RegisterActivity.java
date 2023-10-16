@@ -4,18 +4,16 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-
 import java.util.Calendar;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -102,8 +100,31 @@ public class RegisterActivity extends AppCompatActivity {
         Verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterActivity.this, VerifyEmailActivity.class);
-                startActivity(intent);
+                // Hide the "Verify" button
+                Verify.setVisibility(View.INVISIBLE);
+
+                // Show the circular progress indicator
+                CircularProgressIndicator circularLoading = findViewById(R.id.circularLoading);
+                circularLoading.setVisibility(View.VISIBLE);
+
+                // Simulate a 2-second delay using a Handler
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Start the next activity (VerifyEmailActivity) after the initial 2-second delay
+                        Intent intent = new Intent(RegisterActivity.this, VerifyEmailActivity.class);
+                        startActivity(intent);
+
+                        // After an additional 0.2 or 0.3 seconds, make the "Verify" button visible again
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Verify.setVisibility(View.VISIBLE);
+                                circularLoading.setVisibility(View.INVISIBLE);
+                            }
+                        }, 500); // 500 milliseconds = 0.5 seconds
+                    }
+                }, 1500); // 1500 milliseconds = 1.5 seconds
             }
         });
     }
@@ -111,16 +132,35 @@ public class RegisterActivity extends AppCompatActivity {
     // Define the openDatePicker method to open the date picker dialog
     private void openDatePicker() {
         Calendar calendar = Calendar.getInstance();
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-        int month = calendar.get(Calendar.MONTH);
-        int year = calendar.get(Calendar.YEAR);
+        int currentYear = calendar.get(Calendar.YEAR);
+        int currentMonth = calendar.get(Calendar.MONTH);
+        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
 
-        datePickerDialog = new DatePickerDialog(RegisterActivity.this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                date_of_birth.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
-            }
-        }, year, month, day);
+        // Set the minimum date to January 1, 1980
+        int minYear = 1980;
+        int minMonth = 0; // January (months are 0-indexed)
+        int minDay = 1;
+
+        datePickerDialog = new DatePickerDialog(
+                RegisterActivity.this,
+                R.style.CustomDatePickerDialogTheme, // Apply the custom theme here
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                        date_of_birth.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                    }
+                },
+                currentYear, currentMonth, currentDay
+        );
+
+        Calendar minDate = Calendar.getInstance();
+        minDate.set(minYear, minMonth, minDay);
+
+        // Set the minimum date
+        datePickerDialog.getDatePicker().setMinDate(minDate.getTimeInMillis());
+
+        // Set the maximum date to the current date
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
         datePickerDialog.show();
     }

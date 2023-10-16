@@ -178,8 +178,20 @@
             app:backgroundTint="@color/primary"
             app:cornerRadius="15dp"
             app:rippleColor="@color/buttonRipple"
+            android:visibility="visible"
             android:layout_below="@id/date_of_birth_field"
             tools:ignore="VisualLintButtonSize" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/circularLoading"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/date_of_birth_field"
+            android:visibility="invisible"
+            android:indeterminate="true" />
 
         <RelativeLayout
             android:layout_width="match_parent"
