@@ -33,7 +33,7 @@
             android:textAlignment="center"
             android:textColor="@color/primary"
             android:textSize="22sp"
-            android:paddingTop="32dp"
+            android:paddingTop="48dp"
             android:layout_below="@id/imageView_logo"/>
 
         <com.google.android.material.textview.MaterialTextView
@@ -71,156 +71,90 @@
             android:paddingTop="2dp"
             android:layout_below="@id/department_name"/>
 
-<!--        <com.google.android.material.textview.MaterialTextView-->
-<!--            android:id="@+id/textView_about_reg"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/sf_pro_regular"-->
-<!--            android:text="@string/about_reg"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@color/ash"-->
-<!--            android:textSize="18sp"-->
-<!--            android:paddingTop="4dp"-->
-<!--            android:paddingBottom="16dp"-->
-<!--            android:layout_below="@id/session"/>-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/student_email_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/session"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="12dp"
+            android:hint="@string/send_otp_student_email_field"
+            android:textColorHint="@color/primary"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/primary"
+            app:endIconDrawable="@drawable/round_clear_24"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/primary"
+            app:errorEnabled="false"
+            app:errorIconTint="@color/primary"
+            app:helperTextEnabled="false"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/primary"
+            app:startIconDrawable="@drawable/round_email_24">
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/student_id_field"-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/textView_about_reg"-->
-<!--            android:layout_marginStart="12dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:layout_marginEnd="12dp"-->
-<!--            android:hint="@string/student_id_field"-->
-<!--            android:textColorHint="@color/primary"-->
-<!--            app:boxCornerRadiusBottomEnd="15dp"-->
-<!--            app:boxCornerRadiusBottomStart="15dp"-->
-<!--            app:boxCornerRadiusTopEnd="15dp"-->
-<!--            app:boxCornerRadiusTopStart="15dp"-->
-<!--            app:boxStrokeColor="@color/primary"-->
-<!--            app:endIconDrawable="@drawable/round_clear_24"-->
-<!--            app:endIconMode="clear_text"-->
-<!--            app:endIconTint="@color/primary"-->
-<!--            app:errorEnabled="false"-->
-<!--            app:errorIconTint="@color/primary"-->
-<!--            app:helperTextEnabled="false"-->
-<!--            app:hintAnimationEnabled="true"-->
-<!--            app:hintEnabled="true"-->
-<!--            app:hintTextColor="@color/primary"-->
-<!--            app:startIconDrawable="@drawable/round_person_24">-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/student_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_regular"
+                android:inputType="textEmailAddress"
+                android:paddingStart="52dp"
+                android:paddingEnd="0dp"
+                tools:ignore="VisualLintTextFieldSize" />
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/student_id"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/sf_pro_regular"-->
-<!--                android:inputType="text"-->
-<!--                android:paddingStart="52dp"-->
-<!--                android:paddingEnd="0dp"-->
-<!--                tools:ignore="VisualLintTextFieldSize" />-->
+        </com.google.android.material.textfield.TextInputLayout>
 
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_send_otp_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:text="@string/send_otp_instruction"
+            android:textAlignment="center"
+            android:textColor="@color/ash"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="16sp"
+            android:paddingTop="4dp"
+            android:layout_below="@id/student_email_field"/>
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/student_hsc_roll_field"-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/student_id_field"-->
-<!--            android:layout_marginStart="12dp"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginEnd="12dp"-->
-<!--            android:hint="@string/student_hsc_roll_field"-->
-<!--            android:textColorHint="@color/primary"-->
-<!--            app:boxCornerRadiusBottomEnd="15dp"-->
-<!--            app:boxCornerRadiusBottomStart="15dp"-->
-<!--            app:boxCornerRadiusTopEnd="15dp"-->
-<!--            app:boxCornerRadiusTopStart="15dp"-->
-<!--            app:boxStrokeColor="@color/primary"-->
-<!--            app:endIconDrawable="@drawable/round_clear_24"-->
-<!--            app:endIconMode="clear_text"-->
-<!--            app:endIconTint="@color/primary"-->
-<!--            app:errorEnabled="false"-->
-<!--            app:errorIconTint="@color/primary"-->
-<!--            app:helperTextEnabled="false"-->
-<!--            app:hintAnimationEnabled="true"-->
-<!--            app:hintEnabled="true"-->
-<!--            app:hintTextColor="@color/primary"-->
-<!--            app:startIconDrawable="@drawable/round_numbers_24">-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_send_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:height="55dp"
+            android:fontFamily="@font/sf_pro_bold"
+            android:text="@string/send_otp"
+            android:textSize="18sp"
+            android:textColor="@color/secondary"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="15dp"
+            app:rippleColor="@color/buttonRipple"
+            android:layout_below="@id/textView_send_otp_instruction"
+            android:visibility="visible"
+            tools:ignore="VisualLintButtonSize" />
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/student_hsc_roll"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/sf_pro_regular"-->
-<!--                android:inputType="number"-->
-<!--                android:paddingStart="52dp"-->
-<!--                android:paddingEnd="0dp"-->
-<!--                tools:ignore="VisualLintTextFieldSize" />-->
-
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/date_of_birth_field"-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/student_hsc_roll_field"-->
-<!--            android:layout_marginStart="12dp"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginEnd="12dp"-->
-<!--            android:hint="@string/date_of_birth_field"-->
-<!--            android:textColorHint="@color/primary"-->
-<!--            app:boxCornerRadiusBottomEnd="15dp"-->
-<!--            app:boxCornerRadiusBottomStart="15dp"-->
-<!--            app:boxCornerRadiusTopEnd="15dp"-->
-<!--            app:boxCornerRadiusTopStart="15dp"-->
-<!--            app:boxStrokeColor="@color/primary"-->
-<!--            app:endIconDrawable="@drawable/round_clear_24"-->
-<!--            app:endIconMode="clear_text"-->
-<!--            app:endIconTint="@color/primary"-->
-<!--            app:errorEnabled="false"-->
-<!--            app:errorIconTint="@color/primary"-->
-<!--            app:helperTextEnabled="false"-->
-<!--            app:hintAnimationEnabled="true"-->
-<!--            app:hintEnabled="true"-->
-<!--            app:hintTextColor="@color/primary"-->
-<!--            app:startIconDrawable="@drawable/round_calendar_month_24">-->
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/date_of_birth"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/sf_pro_regular"-->
-<!--                android:inputType="date"-->
-<!--                android:paddingStart="52dp"-->
-<!--                android:paddingEnd="0dp"-->
-<!--                tools:ignore="VisualLintTextFieldSize" />-->
-
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:id="@+id/button_verify"-->
-<!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="12dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:layout_marginEnd="12dp"-->
-<!--            android:layout_marginBottom="8dp"-->
-<!--            android:height="60dp"-->
-<!--            android:fontFamily="@font/sf_pro_bold"-->
-<!--            android:text="@string/verify_button"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textColor="@color/secondary"-->
-<!--            app:backgroundTint="@color/primary"-->
-<!--            app:cornerRadius="15dp"-->
-<!--            app:rippleColor="@color/buttonRipple"-->
-<!--            android:layout_below="@id/date_of_birth_field"-->
-<!--            tools:ignore="VisualLintButtonSize" />-->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/circularLoading"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textView_send_otp_instruction"
+            android:visibility="invisible"
+            android:indeterminate="true" />
 
     </RelativeLayout>
 

@@ -3,7 +3,10 @@
     <string name="welcome">Welcome to Quillium</string>
     <string name="about_app">Join discussions, share updates, and connect with fellow students effortlessly. It\'s your gateway to a vibrant campus life.</string>
     <string name="student_email_field">Email</string>
+    <string name="send_otp_student_email_field">Student Email</string>
     <string name="password_id_field">Password</string>
+    <string name="create_password_id_field">Create Password</string>
+    <string name="confirm_password_id_field">Confirm Password</string>
     <string name="login">LOGIN</string>
     <string name="register">Register Now</string>
     <string name="prompt_reg">Don\'t have an account?</string>
@@ -16,10 +19,16 @@
     <string name="student_id_field">Student ID</string>
     <string name="student_hsc_roll_field">HSC Roll</string>
     <string name="date_of_birth_field">Date of Birth</string>
-    <string name="confirm_password_id_field">Confirm Password</string>
     <string name="welcome_student">Hi there!</string>
     <string name="student_name">Nishat Mahmud</string>
     <string name="student_id">B190305003</string>
     <string name="department">Computer Science and Engineering</string>
     <string name="session">2019 – 20</string>
+    <string name="send_otp_instruction">Enter your institutional email address, and we will send an OTP to that email address. Ensure that your email address matches your student ID.</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="enter_otp_instruction">We\'ve just sent an OTP to your email address. Please check your inbox and spam folder. You can request for a new one in</string>
+    <string name="resend_otp_timer">1:50</string>
+    <string name="resend_otp">RESEND OTP</string>
 </resources>

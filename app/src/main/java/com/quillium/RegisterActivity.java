@@ -107,15 +107,15 @@ public class RegisterActivity extends AppCompatActivity {
                 CircularProgressIndicator circularLoading = findViewById(R.id.circularLoading);
                 circularLoading.setVisibility(View.VISIBLE);
 
-                // Simulate a 2-second delay using a Handler
+                // Simulate a 1.5-second delay using a Handler
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        // Start the next activity (VerifyEmailActivity) after the initial 2-second delay
+                        // Start the next activity (VerifyEmailActivity) after the initial 1.5-second delay
                         Intent intent = new Intent(RegisterActivity.this, VerifyEmailActivity.class);
                         startActivity(intent);
 
-                        // After an additional 0.2 or 0.3 seconds, make the "Verify" button visible again
+                        // After an additional 0.5 seconds, make the "Verify" button visible again
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
