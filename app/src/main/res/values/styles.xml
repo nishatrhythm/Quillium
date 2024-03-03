@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="CustomDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <!-- Customize the header color (e.g., title) -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_input_feild</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Add more styling attributes as needed -->
+    </style>
+    <style name="CustomDatePickerDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog" tools:ignore="DuplicateDefinition">
+        <!-- Customize the color of the date picker -->
         <item name="colorAccent">@color/primary</item>
-
-        <!-- Customize the date numbers' color -->
-        <item name="android:textColorPrimary">@color/ash</item>
-
-        <!-- Customize the OK and Cancel buttons -->
-        <item name="android:datePickerDialogTheme">@style/CustomDatePickerDialogButtonTheme</item>
     </style>
 
-    <style name="CustomDatePickerDialogButtonTheme">
-        <item name="android:textColorPrimary">@color/primary</item>
-        <!-- Add more button-related customizations as needed -->
-    </style>
 
 </resources>

@@ -9,16 +9,34 @@ import android.os.Handler;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class VerifyEmailActivity extends AppCompatActivity {
 
+    String receivedValue1;
+    String receivedValue2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.verify_email);
+        setContentView(R.layout.activity_verify_email);
+
+        // Retrieve the data from the intent
+        Intent intent = getIntent();
+        if (intent != null) {
+            String data = intent.getStringExtra("key"); // Replace "key" with the same key used in SenderActivity
+            if (data != null) {
+                // Do something with the received data
+            }
+        }
+
+        TextView studentId = findViewById(R.id.student_id_textView);
+
+        studentId.setText(receivedValue1);
+
 
         TextInputEditText studentIdEditText = findViewById(R.id.student_email);
 
@@ -59,7 +77,7 @@ public class VerifyEmailActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         // Start the next activity (VerifyEmailActivity) after the initial 2-second delay
-                        Intent intent = new Intent(VerifyEmailActivity.this, CreatePassword.class);
+                        Intent intent = new Intent(VerifyEmailActivity.this, CreatePasswordActivity.class);
                         startActivity(intent);
 
                         // After an additional 0.2 or 0.3 seconds, make the "Verify" button visible again

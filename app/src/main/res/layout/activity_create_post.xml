@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/app_bg"
+    android:animateLayoutChanges="true"
+    tools:context=".CreatePostActivity">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close_button_create_posst"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/baseline_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="Create Post"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/close_button_create_posst"
+        app:layout_constraintStart_toEndOf="@+id/close_button_create_posst"
+        app:layout_constraintTop_toTopOf="@id/close_button_create_posst" />
+
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/postButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/lavender"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="POST"
+        android:textColor="@android:color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/ash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postButton" />
+
+    <!-- User Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePictureCreatePost"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/man"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/create_post_fullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_pro_bold"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profilePictureCreatePost"
+        app:layout_constraintStart_toEndOf="@+id/profilePictureCreatePost"
+        app:layout_constraintTop_toTopOf="@+id/profilePictureCreatePost" />
+
+    <!-- What's on your mind? -->
+    <EditText
+        android:id="@+id/whatsOnYourMind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profilePictureCreatePost"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/sf_pro_regular"
+        android:hint="What's on your mind?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePictureCreatePost" />
+
+    <LinearLayout
+        android:id="@+id/craetepost_upload_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whatsOnYourMind"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatsOnYourMind">
+
+        <!-- Photo or Video -->
+        <ImageView
+            android:id="@+id/upload_photo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_photo_library_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:text="Add a photo"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+    <!-- Post Photo -->
+    <ImageView
+        android:id="@+id/create_post_PostPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/craetepost_upload_photo"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/craetepost_upload_photo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@mipmap/app_bg"-->
+    <!--    android:backgroundTintMode="src_over"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="15dp"-->
+    <!--        android:padding="15dp">-->
+
+    <!--        &lt;!&ndash; Profile Picture &ndash;&gt;-->
+    <!--        <ImageView-->
+    <!--            android:id="@+id/close_button_create_posst"-->
+    <!--            android:layout_width="30dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:src="@drawable/round_clear_24"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            />-->
+
+    <!--        &lt;!&ndash; Profile Picture &ndash;&gt;-->
+    <!--        <ImageView-->
+    <!--            android:id="@+id/profilePicture"-->
+    <!--            android:layout_width="50dp"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_marginLeft="30dp"-->
+    <!--            android:layout_toEndOf="@id/close_button_create_posst"-->
+    <!--            android:src="@drawable/man"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            />-->
+
+    <!--        &lt;!&ndash; Full Name &ndash;&gt;-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/create_post_fullName"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/sf_pro_bold"-->
+    <!--            android:text="John Doe"-->
+    <!--            android:textSize="16sp"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:layout_toEndOf="@id/profilePicture"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:layout_marginBottom="16dp"/>-->
+
+    <!--        &lt;!&ndash; Post Button &ndash;&gt;-->
+    <!--        <Button-->
+    <!--            android:id="@+id/postButton"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Post"-->
+    <!--            android:fontFamily="@font/sf_pro_bold"-->
+    <!--            android:layout_alignParentEnd="true"-->
+    <!--            android:layout_marginBottom="16dp"/>-->
+
+    <!--        &lt;!&ndash; What's on your mind? &ndash;&gt;-->
+    <!--        <EditText-->
+    <!--            android:id="@+id/whatsOnYourMind"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/sf_pro_regular"-->
+    <!--            android:hint="What's on your mind?"-->
+    <!--            android:layout_below="@id/profilePicture"-->
+    <!--            android:background="@android:color/transparent"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:layout_marginBottom="25dp"/>-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/craetepost_upload_photo"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/whatsOnYourMind">-->
+
+    <!--            &lt;!&ndash; Photo or Video &ndash;&gt;-->
+    <!--            <ImageView-->
+    <!--                android:id="@+id/upload_photo"-->
+    <!--                android:layout_width="25dp"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:src="@drawable/baseline_photo_library_24"-->
+    <!--                android:scaleType="centerCrop"-->
+    <!--                />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:textSize="18dp"-->
+    <!--                android:fontFamily="@font/sf_pro_regular"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:text="Photo/video" />-->
+
+
+    <!--        </LinearLayout>-->
+
+    <!--        &lt;!&ndash; Post Photo &ndash;&gt;-->
+    <!--        <ImageView-->
+    <!--            android:id="@+id/create_post_PostPhoto"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="200dp"-->
+    <!--            android:layout_below="@id/craetepost_upload_photo"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:scaleType="centerCrop" />-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--</ScrollView>-->

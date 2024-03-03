@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "442279247046",
+    "project_id": "quillium-db",
+    "storage_bucket": "quillium-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442279247046:android:85ce32cfb3bb2817ab6bc7",
+        "android_client_info": {
+          "package_name": "com.quillium"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVGbn1Kit5lteRWXxZAclwAQHn1Rjmvxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

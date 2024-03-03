@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_button"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+
+    <item
+        android:id="@+id/friends_button"
+        android:title="Add Friend"
+        android:icon="@drawable/person_add"
+        />
+
+    <item
+        android:title=""/>
+
+    <item
+        android:id="@+id/notifications_button"
+        android:title="Notification"
+        android:icon="@drawable/notifications" />
+    <item
+        android:id="@+id/profile_button"
+        android:title="Profile"
+        android:icon="@drawable/account_circle" />
+
+</menu>

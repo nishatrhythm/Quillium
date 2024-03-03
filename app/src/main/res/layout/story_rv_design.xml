@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/storyImg"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/storyType"
+        app:riv_border_color="#333333"
+        app:riv_corner_radius="10dip"
+        app:riv_mutate_background="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/storyImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <com.devlomi.circularstatusview.CircularStatusView-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@color/ash"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/profile_image_picture"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/profile_image_picture"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/profile_image_picture"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/profile_image_picture" />-->
+
+    <ImageView
+        android:id="@+id/storyType"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/storyImg"
+        app:layout_constraintTop_toTopOf="@+id/storyImg" />
+
+    <TextView
+        android:id="@+id/storyPersonFrontName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:text=""
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/storyImg"
+        app:layout_constraintStart_toStartOf="@+id/storyImg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

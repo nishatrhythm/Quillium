@@ -28,7 +28,13 @@
     <string name="send_otp">SEND OTP</string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="enter_otp">Enter OTP</string>
-    <string name="enter_otp_instruction">We\'ve just sent an OTP to your email address. Please check your inbox and spam folder. You can request for a new one in</string>
+    <string name="enter_otp_instruction">Your password needs to be at least 8 characters long and include an uppercase letter and a special character.</string>
     <string name="resend_otp_timer">1:50</string>
     <string name="resend_otp">RESEND OTP</string>
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

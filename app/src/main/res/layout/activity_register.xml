@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/app_bg"
+    android:backgroundTintMode="src_over"
+    android:animateLayoutChanges="true"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_logo"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@mipmap/app_logo"
+            android:maxWidth="100dp"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_main_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_bold"
+            android:text="@string/reg_activity_title"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="32sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:layout_below="@id/imageView_logo"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_about_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:text="@string/about_reg"
+            android:textAlignment="center"
+            android:textColor="@color/ash"
+            android:textSize="18sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:layout_below="@id/textView_main_head"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_about_reg"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:hint="Full Name"
+            android:textColorHint="@color/primary"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/primary"
+            app:endIconDrawable="@drawable/round_clear_24"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/primary"
+            app:errorEnabled="false"
+            app:errorIconTint="@color/primary"
+            app:helperTextEnabled="false"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/primary"
+            app:startIconDrawable="@drawable/round_person_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/student_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_regular"
+                android:inputType="text"
+                android:paddingStart="52dp"
+                android:paddingEnd="0dp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/studentEmailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fullNameField"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:hint="Institutional Email"
+            android:textColorHint="@color/primary"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/primary"
+            app:endIconDrawable="@drawable/round_clear_24"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/primary"
+            app:errorEnabled="false"
+            app:errorIconTint="@color/primary"
+            app:helperTextEnabled="false"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/primary"
+            app:startIconDrawable="@drawable/round_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/student_hsc_roll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_regular"
+                android:inputType="textEmailAddress"
+                android:paddingStart="52dp"
+                android:paddingEnd="0dp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:height="55dp"
+            android:fontFamily="@font/sf_pro_bold"
+            android:text="NEXT"
+            android:textSize="18sp"
+            android:textColor="@color/secondary"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="15dp"
+            app:rippleColor="@color/buttonRipple"
+            android:visibility="visible"
+            android:layout_below="@id/studentEmailField"
+            tools:ignore="VisualLintButtonSize" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/circularLoading"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/studentEmailField"
+            android:visibility="gone"
+            android:indeterminate="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_verify"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_login_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/sf_pro_regular"
+                android:paddingTop="4dp"
+                android:paddingBottom="0dp"
+                android:text="@string/prompt_login"
+                android:textAlignment="center"
+                android:textColor="@color/ash"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_login_prompt"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/sf_pro_bold"
+                android:paddingTop="4dp"
+                android:paddingBottom="32dp"
+                android:text="@string/reg_activity_login"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
