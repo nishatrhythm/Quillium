@@ -56,7 +56,6 @@ Contributions are what makes the open-source community such an amazing place to 
 This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details
 
 ## Screenshots
-## Screenshots
 
 | App View (Screenshot 1) | App View (Screenshot 2) | App View (Screenshot 3) |
 |--------------------------|--------------------------|--------------------------|
